@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ayaan Waheed — MERN Stack Developer</title>
+  <meta name="description" content="Ayaan Waheed — MERN Stack Developer & AI Integrator. Karachi, Pakistan."/>
+ 
+  <!-- Fonts: Neue Haas style via Google -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,600;0,700;0,900;1,700&family=Barlow+Condensed:wght@700;900&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet"/>
+ 
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+ 
+  <!-- GSAP + ScrollTrigger + SplitText alternative via custom split -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+ 
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+ 
+  <!-- PAGE TRANSITION -->
+  <div class="page-transition" id="pageTransition">
+    <div class="pt-text">AW</div>
+  </div>
+ 
+  <!-- CUSTOM CURSOR -->
+  <div class="c-cursor" id="cCursor">
+    <div class="c-cursor__inner"></div>
+    <div class="c-cursor__text" id="cCursorText"></div>
+  </div>
+ 
+  <!-- NOISE OVERLAY -->
+  <div class="noise"></div>
+ 
+  <!-- ═══════════════════════════════
+       NAVBAR
+  ═══════════════════════════════ -->
+  <header id="header">
+    <div class="header__inner">
+ 
+      <a href="#hero" class="header__logo">
+        <span class="logo-aw">AW</span><span class="logo-dot">.</span>
+      </a>
+ 
+      <nav class="header__nav">
+        <a href="#about" class="nav-item" data-index="01">About</a>
+        <a href="#services" class="nav-item" data-index="02">Services</a>
+        <a href="#skills" class="nav-item" data-index="03">Skills</a>
+        <a href="#work" class="nav-item" data-index="04">Work</a>
+        <a href="#contact" class="nav-item" data-index="05">Contact</a>
+      </nav>
+ 
+      <div class="header__right">
+        <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
+          <span class="tb-dark"><i class="ti ti-sun"></i> Light</span>
+          <span class="tb-light"><i class="ti ti-moon"></i> Dark</span>
+        </button>
+        <a href="mailto:ayaanwaheed82@gmail.com" class="header__cta">
+          <span>Hire Me</span>
+          <i class="ti ti-arrow-up-right"></i>
+        </a>
+        <button class="burger" id="burger">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+ 
+    <!-- Mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" onclick="closeMobile()">About</a>
+      <a href="#services" onclick="closeMobile()">Services</a>
+      <a href="#skills" onclick="closeMobile()">Skills</a>
+      <a href="#work" onclick="closeMobile()">Work</a>
+      <a href="#contact" onclick="closeMobile()">Contact</a>
+    </div>
+  </header>
+ 
+  <!-- ═══════════════════════════════
+       HERO
+  ═══════════════════════════════ -->
+  <section id="hero">
+ 
+    <!-- Top meta row -->
+    <div class="hero__meta">
+      <span class="hero__index">00 / MMXXV</span>
+      <span class="hero__status"><span class="pulse"></span>Available</span>
+      <span class="hero__location">Karachi, PK</span>
+    </div>
+ 
+    <!-- BIG headline -->
+    <div class="hero__headline">
+      <div class="hero__line-wrap">
+        <h1 class="hero__line" id="h1l1">MERN Stack</h1>
+      </div>
+      <div class="hero__line-wrap split-row">
+        <h1 class="hero__line italic" id="h1l2">Developer</h1>
+        <!-- Photo inlined in headline -->
+        <div class="hero__photo-inline" id="heroPhoto">
+          <img src="Gemini_Generated_Image_emx1ilemx1ilemx1.png" alt="Ayaan Waheed"/>
+        </div>
+      </div>
+      <div class="hero__line-wrap">
+        <h1 class="hero__line" id="h1l3">&amp; AI Builder.</h1>
+      </div>
+    </div>
+ 
+    <!-- Bottom strip -->
+    <div class="hero__bottom">
+      <p class="hero__desc" id="heroDesc">
+        Full-stack engineer crafting scalable web apps with Node.js, Express, MongoDB and AI integrations that solve real problems.
+      </p>
+      <div class="hero__actions" id="heroActions">
+        <a href="#work" class="btn-primary">
+          <span>View Work</span>
+          <i class="ti ti-arrow-right"></i>
+        </a>
+        <a href="https://github.com/awanayaan97-maker" target="_blank" class="btn-outline">
+          GitHub <i class="ti ti-arrow-up-right"></i>
+        </a>
+      </div>
+      <div class="hero__scroll" id="heroScroll">
+        <div class="hs-line"></div>
+        <span>Scroll</span>
+      </div>
+    </div>
+ 
+  </section>
+ 
+  <!-- ═══════════════════════════════
+       MARQUEE
+  ═══════════════════════════════ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee__track">
+      <span>HTML</span><span class="mx">—</span>
+      <span>CSS</span><span class="mx">—</span>
+      <span>JavaScript</span><span class="mx">—</span>
+      <span>Node.js</span><span class="mx">—</span>
+      <span>Express.js</span><span class="mx">—</span>
+      <span>MongoDB</span><span class="mx">—</span>
+      <span>Gemini AI</span><span class="mx">—</span>
+      <span>REST APIs</span><span class="mx">—</span>
+      <span>React</span><span class="mx">—</span>
+      <span>TypeScript</span><span class="mx">—</span>
+      <!-- dupe -->
+      <span>HTML</span><span class="mx">—</span>
+      <span>CSS</span><span class="mx">—</span>
+      <span>JavaScript</span><span class="mx">—</span>
+      <span>Node.js</span><span class="mx">—</span>
+      <span>Express.js</span><span class="mx">—</span>
+      <span>MongoDB</span><span class="mx">—</span>
+      <span>Gemini AI</span><span class="mx">—</span>
+      <span>REST APIs</span><span class="mx">—</span>
+      <span>React</span><span class="mx">—</span>
+      <span>TypeScript</span><span class="mx">—</span>
+    </div>
+  </div>
+ 
+  <!-- ═══════════════════════════════
+       ABOUT
+  ═══════════════════════════════ -->
+  <section id="about" class="section">
+    <div class="wrap">
+      <div class="section__header">
+        <span class="eyebrow reveal-text">01 — About</span>
+      </div>
+ 
+      <div class="about__grid">
+        <div class="about__photo-col">
+          <div class="about__photo-wrap reveal-up">
+            <img src="Gemini_Generated_Image_emx1ilemx1ilemx1.png" alt="Ayaan Waheed — MERN Stack Developer"/>
+            <div class="photo-caption">
+              <span>Ayaan Waheed</span>
+              <span>Karachi, 2025</span>
+            </div>
+          </div>
+        </div>
+ 
+        <div class="about__content">
+          <h2 class="big-text reveal-up">
+            Young developer.<br><em>Real results.</em>
+          </h2>
+          <p class="body-text reveal-up">
+            I'm a <strong>self-taught MERN Stack developer</strong> in my Intermediate 2nd Year at National College, Karachi. While most students are memorising textbooks, I'm building production-grade web apps.
+          </p>
+          <p class="body-text reveal-up">
+            My specialty is combining backend performance with AI intelligence — creating apps that don't just work, they <em>think</em>.
+          </p>
+ 
+          <div class="about__facts reveal-up">
+            <div class="fact">
+              <span class="fact__num">3</span>
+              <span class="fact__label">Projects shipped</span>
+            </div>
+            <div class="fact">
+              <span class="fact__num">7+</span>
+              <span class="fact__label">Technologies</span>
+            </div>
+            <div class="fact">
+              <span class="fact__num">2</span>
+              <span class="fact__label">AI integrations</span>
+            </div>
+            <div class="fact">
+              <span class="fact__num">∞</span>
+              <span class="fact__label">Drive to build</span>
+            </div>
+          </div>
+ 
+          <div class="about__links reveal-up">
+            <a href="https://www.linkedin.com/in/ayaan-waheed-7b225b39b/" target="_blank" class="icon-link">
+              <i class="ti ti-brand-linkedin"></i> LinkedIn
+            </a>
+            <a href="https://github.com/awanayaan97-maker" target="_blank" class="icon-link">
+              <i class="ti ti-brand-github"></i> GitHub
+            </a>
+            <a href="mailto:ayaanwaheed82@gmail.com" class="icon-link">
+              <i class="ti ti-mail"></i> Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ═══════════════════════════════
+       SERVICES
+  ═══════════════════════════════ -->
+  <section id="services" class="section section--alt">
+    <div class="wrap">
+      <div class="section__header">
+        <span class="eyebrow reveal-text">02 — Services</span>
+        <h2 class="section__title reveal-up">What I Build</h2>
+      </div>
+ 
+      <div class="services__list">
+        <div class="srv-row reveal-up" data-cursor="Backend">
+          <span class="srv-num">01</span>
+          <div class="srv-body">
+            <h3>Backend Development</h3>
+            <p>REST APIs, JWT auth, MongoDB schemas, middleware — the invisible engine that powers your product.</p>
+          </div>
+          <div class="srv-tags">
+            <span>Node.js</span><span>Express</span><span>MongoDB</span><span>REST API</span>
+          </div>
+          <i class="ti ti-arrow-up-right srv-arrow"></i>
+        </div>
+ 
+        <div class="srv-row reveal-up" data-cursor="FullStack">
+          <span class="srv-num">02</span>
+          <div class="srv-body">
+            <h3>Full Stack Web Apps</h3>
+            <p>End-to-end applications — from database architecture to responsive frontend, deployed and production-ready.</p>
+          </div>
+          <div class="srv-tags">
+            <span>MERN</span><span>Full Stack</span><span>Deploy</span>
+          </div>
+          <i class="ti ti-arrow-up-right srv-arrow"></i>
+        </div>
+ 
+        <div class="srv-row reveal-up featured-row" data-cursor="AI">
+          <span class="srv-num">03</span>
+          <div class="srv-body">
+            <h3>AI Integration <span class="hot-badge">Hot</span></h3>
+            <p>Add real intelligence — Gemini, OpenAI — that automates tasks, generates content, and makes your app smarter.</p>
+          </div>
+          <div class="srv-tags">
+            <span>Gemini AI</span><span>OpenAI</span><span>Automation</span>
+          </div>
+          <i class="ti ti-arrow-up-right srv-arrow"></i>
+        </div>
+ 
+        <div class="srv-row reveal-up" data-cursor="Landing">
+          <span class="srv-num">04</span>
+          <div class="srv-body">
+            <h3>Landing Pages</h3>
+            <p>Premium, animated landing pages for businesses and startups — fast, SEO-ready, and built to convert.</p>
+          </div>
+          <div class="srv-tags">
+            <span>HTML/CSS</span><span>GSAP</span><span>SEO</span>
+          </div>
+          <i class="ti ti-arrow-up-right srv-arrow"></i>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  
+  <section id="skills" class="section">
+    <div class="wrap">
+      <div class="section__header">
+        <span class="eyebrow reveal-text">03 — Skills</span>
+        <h2 class="section__title reveal-up">Tech Stack</h2>
+      </div>
+ 
+      <div class="skills__grid">
+        <div class="skill-item reveal-up" data-pct="92">
+          <div class="si-top">
+            <span class="si-name">
+              <span class="si-emoji"><i class="fab fa-html5" style="color: #e34c26; margin-right: 5px;"></i></span> 
+              HTML5
+            </span>
+            <span class="si-pct">92%</span>
+          </div>
+          <div class="si-track"><div class="si-fill"></div></div>
+        </div>
+
+        <div class="skill-item reveal-up" data-pct="88">
+          <div class="si-top">
+            <span class="si-name">
+              <span class="si-emoji"><i class="fab fa-css3-alt" style="color: #264de4; margin-right: 5px;"></i></span> 
+              CSS3
+            </span>
+            <span class="si-pct">88%</span>
+          </div>
+          <div class="si-track"><div class="si-fill"></div></div>
+        </div>
+
+        <div class="skill-item reveal-up" data-pct="85">
+          <div class="si-top">
+            <span class="si-name">
+              <span class="si-emoji"><i class="fab fa-js" style="color: #f7df1e; margin-right: 5px;"></i></span> 
+              JavaScript
+            </span>
+            <span class="si-pct">85%</span>
+          </div>
+          <div class="si-track"><div class="si-fill"></div></div>
+        </div>
+
+        <div class="skill-item reveal-up" data-pct="83">
+          <div class="si-top">
+            <span class="si-name">
+              <span class="si-emoji"><i class="fab fa-node-js" style="color: #3c873a; margin-right: 5px;"></i></span> 
+              Node.js
+            </span>
+            <span class="si-pct">83%</span>
+          </div>
+          <div class="si-track"><div class="si-fill"></div></div>
+        </div>
+
+        <div class="skill-item reveal-up" data-pct="80">
+          <div class="si-top">
+            <span class="si-name">
+              <span class="si-emoji"><i class="fas fa-server" style="color: #7e7e86; margin-right: 5px;"></i></span> 
+              Express.js
+            </span>
+            <span class="si-pct">80%</span>
+          </div>
+          <div class="si-track"><div class="si-fill"></div></div>
+        </div>
+
+        <div class="skill-item reveal-up" data-pct="78">
+          <div class="si-top">
+            <span class="si-name">
+              <span class="si-emoji"><i class="fas fa-database" style="color: #4db33d; margin-right: 5px;"></i></span> 
+              MongoDB
+            </span>
+            <span class="si-pct">78%</span>
+          </div>
+          <div class="si-track"><div class="si-fill"></div></div>
+        </div>
+
+        <div class="skill-item reveal-up" data-pct="76">
+          <div class="si-top">
+            <span class="si-name">
+              <span class="si-emoji"><i class="fas fa-brain" style="color: #00f0ff; margin-right: 5px;"></i></span> 
+              AI Integration
+            </span>
+            <span class="si-pct">76%</span>
+          </div>
+          <div class="si-track"><div class="si-fill"></div></div>
+        </div>
+
+        <div class="skill-item reveal-up" data-pct="55">
+          <div class="si-top">
+            <span class="si-name">
+              <span class="si-emoji"><i class="fab fa-react" style="color: #61dafb; margin-right: 5px;"></i></span> 
+              React (Learning)
+            </span>
+            <span class="si-pct">55%</span>
+          </div>
+          <div class="si-track"><div class="si-fill"></div></div>
+        </div>
+      </div>
+    </div>
+</section>
+ 
+  <!-- ═══════════════════════════════
+       PROCESS
+  ═══════════════════════════════ -->
+  <section id="process" class="section section--alt">
+    <div class="wrap">
+      <div class="section__header">
+        <span class="eyebrow reveal-text">04 — Process</span>
+        <h2 class="section__title reveal-up">How I Work</h2>
+      </div>
+      <div class="process__steps process-grid-trigger">
+        <div class="proc-step reveal-up">
+          <span class="ps-num">01</span>
+          <h3>Discovery</h3>
+          <p>I listen first. Understand your goal, timeline, and constraints before writing any code.</p>
+        </div>
+        <div class="proc-step reveal-up">
+          <span class="ps-num">02</span>
+          <h3>Architecture</h3>
+          <p>Plan the database schema, API routes, and component structure — no surprises later.</p>
+        </div>
+        <div class="proc-step reveal-up">
+          <span class="ps-num">03</span>
+          <h3>Build & Iterate</h3>
+          <p>Clean, commented code. Regular updates. You see progress — not just a final delivery.</p>
+        </div>
+        <div class="proc-step reveal-up">
+          <span class="ps-num">04</span>
+          <h3>Deliver & Support</h3>
+          <p>Deploy, hand over source code, and stay available for post-launch fixes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ═══════════════════════════════
+       WORK / PROJECTS
+  ═══════════════════════════════ -->
+  <section id="work" class="section">
+    <div class="wrap">
+      <div class="section__header">
+        <span class="eyebrow reveal-text">05 — Work</span>
+        <h2 class="section__title reveal-up">Featured Projects</h2>
+      </div>
+ 
+      <!-- Featured big card -->
+      <div class="work-featured reveal-up">
+        <div class="wf-meta">
+          <span class="wf-num">01</span>
+          <span class="wf-year">2025</span>
+          <span class="wf-live"><span class="pulse"></span>Live</span>
+        </div>
+        <div class="wf-body">
+          <h3 class="wf-title">ResumeMate</h3>
+          <p class="wf-desc">A decoupled full-stack web application that helps job seekers generate professional, ATS-friendly resumes. Powered by Google Gemini AI — auto-drafts high-impact professional summaries from basic user input. Built with a vanilla JS frontend and a high-speed Express backend.</p>
+          <div class="wf-highlights">
+            <div class="wfh"><i class="ti ti-brain"></i><span>Google Gemini AI</span></div>
+            <div class="wfh"><i class="ti ti-bolt"></i><span>Instant feedback</span></div>
+            <div class="wfh"><i class="ti ti-file-check"></i><span>ATS-optimised</span></div>
+            <div class="wfh"><i class="ti ti-server"></i><span>Express backend</span></div>
+          </div>
+        </div>
+        <div class="wf-footer">
+          <div class="wf-tags">
+            <span>Vanilla JS</span><span>Express.js</span><span>MongoDB</span><span>Gemini AI</span><span>REST API</span>
+          </div>
+          <div class="wf-actions">
+            <a href="https://github.com/awanayaan97-maker" target="_blank" class="btn-outline sm"><i class="ti ti-brand-github"></i> Code</a>
+            <a href="https://reume-mate-frontend.vercel.app/" class="btn-primary sm"><i class="ti ti-external-link"></i> Live</a>
+          </div>
+        </div>
+      </div>
+ 
+      <!-- Small cards row -->
+      <div class="work-grid">
+        <div class="work-card reveal-up">
+          <div class="wc-top">
+            <span class="wc-icon">🚀</span>
+            <span class="wc-badge upcoming">In Progress</span>
+          </div>
+          <h3>Next MERN App</h3>
+          <p>Full MERN with React & TypeScript — learning in progress, shipping soon.</p>
+          <div class="wc-tags"><span>React</span><span>TypeScript</span><span>MongoDB</span></div>
+        </div>
+        <div class="work-card open-work reveal-up">
+          <div class="wc-top">
+            <span class="wc-icon">💡</span>
+            <span class="wc-badge open">Open</span>
+          </div>
+          <h3>Your Project Here</h3>
+          <p>I'm actively taking on freelance work. Got an idea? Let's build it.</p>
+          <a href="#contact" class="btn-primary sm" style="margin-top:1.2rem;display:inline-flex">Start a Project →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  
+  <!-- ═══════════════════════════════
+       CONTACT
+  ═══════════════════════════════ -->
+  <section id="contact" class="section">
+    <div class="wrap">
+      <div class="contact__hero reveal-up">
+        <span class="eyebrow">07 — Contact</span>
+        <h2 class="contact__big">Let's Build<br><em>Something.</em></h2>
+      </div>
+ 
+      <div class="contact__grid">
+        <div class="contact__left reveal-up">
+          <p class="body-text">Open to freelance projects, collaborations, and remote work. Drop a message — I usually reply within 24 hours.</p>
+ 
+          <div class="ct-links">
+            <a href="mailto:ayaanwaheed82@gmail.com" class="ct-row">
+              <span class="ct-label">Email</span>
+              <span class="ct-val">ayaanwaheed82@gmail.com <i class="ti ti-arrow-up-right"></i></span>
+            </a>
+            <a href="tel:+923131187662" class="ct-row">
+              <span class="ct-label">Phone</span>
+              <span class="ct-val">03131187662 <i class="ti ti-arrow-up-right"></i></span>
+            </a>
+            <a href="https://www.linkedin.com/in/ayaan-waheed-7b225b39b/" target="_blank" class="ct-row">
+              <span class="ct-label">LinkedIn</span>
+              <span class="ct-val">ayaan-waheed <i class="ti ti-arrow-up-right"></i></span>
+            </a>
+            <a href="https://github.com/awanayaan97-maker" target="_blank" class="ct-row">
+              <span class="ct-label">GitHub</span>
+              <span class="ct-val">awanayaan97-maker <i class="ti ti-arrow-up-right"></i></span>
+            </a>
+          </div>
+        </div>
+ 
+        <div class="contact__right reveal-up">
+          <form class="c-form" action="https://formsubmit.co/ayaanwaheed82@gmail.com" method="POST" id="contact-form" onsubmit="return submitForm(event)">
+            <div class="cf-row">
+              <div class="cf-field">
+                <label>Name</label>
+                <input name="name" type="text" id="cf-name" placeholder="Your name" required/>
+              </div>
+              <div class="cf-field">
+                <label>Email</label>
+                <input name="email" type="email" id="cf-email" placeholder="your@email.com" required/>
+              </div>
+            </div>
+            <div class="cf-field">
+              <label>Service</label>
+              <select id="cf-type">
+                <option value="">What do you need?</option>
+                <option>Backend Development</option>
+                <option>Full Stack Web App</option>
+                <option>AI Integration</option>
+                <option>Landing Page</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="cf-field">
+              <label>Message</label>
+              <textarea name="message" id="cf-msg" rows="4" placeholder="Tell me about your project..." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary full">
+              Send Message <i class="ti ti-arrow-right"></i>
+            </button>
+            <div id="form-msg"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+  <!-- ═══════════════════════════════
+       FOOTER
+  ═══════════════════════════════ -->
+  <footer>
+    <div class="wrap footer__inner">
+      <div class="footer__logo">
+        <span class="logo-aw">AW</span><span class="logo-dot">.</span>
+      </div>
+      <p class="footer__copy">Designed & built in Karachi 🇵🇰 · 2025</p>
+      <div class="footer__socials">
+        <a href="https://www.linkedin.com/in/ayaan-waheed-7b225b39b/" target="_blank" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+        <a href="https://github.com/awanayaan97-maker" target="_blank" aria-label="GitHub"><i class="ti ti-brand-github"></i></a>
+        <a href="mailto:ayaanwaheed82@gmail.com" aria-label="Email"><i class="ti ti-mail"></i></a>
+      </div>
+    </div>
+  </footer>
+ 
+  <button class="scroll-top" id="scrollTop" aria-label="Back to top">
+    <i class="ti ti-arrow-up"></i>
+  </button>
+ 
+  <script src="main.js"></script>
+</body>
+</html>
+ 
